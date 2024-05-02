@@ -37,7 +37,16 @@ view: fsp {
     type: string
     sql: ${TABLE}."whatsapp" ;;
   }
+  dimension: TestConcatenar {
+    type: string
+    sql: concat(${correo_electronico},' ' ,${whatsapp}) ;;
+  }
   measure: count {
     type: count
+  }
+  measure: industriatelcom {
+    type: count
+    drill_fields: []
+    filters: [industria : "telcom"]
   }
 }

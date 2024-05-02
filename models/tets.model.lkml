@@ -10,5 +10,9 @@ datagroup: tets_default_datagroup {
 
 persist_with: tets_default_datagroup
 
-explore: fsp {}
+explore: fsp {access_filter: {
 
+    field: industria
+    user_attribute: telcom
+  }
+  }
